@@ -1,24 +1,12 @@
 {
-  "name": "nodeMongo",
+  "name": "node-test",
   "version": "1.0.0",
-  "description": "Node.js and MongoDb tutorial.",
   "main": "Server.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+     "start": "nodemon Server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/codeforgeek/Node-and-mongo-tutorial"
-  },
-  "keywords": [
-    "Node.js",
-    "mongoDb"
-  ],
-  "author": "Shahid Shaikh",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/codeforgeek/Node-and-mongo-tutorial/issues"
-  },
+
   "homepage": "https://github.com/codeforgeek/Node-and-mongo-tutorial",
   "dependencies": {
     "body-parser": "^1.13.3",
