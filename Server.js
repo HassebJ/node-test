@@ -93,5 +93,5 @@ router.route("/users/:id")
 
 app.use('/',router);
 
-app.listen(8000);
-console.log("Listening to PORT 3000");
+app.listen(process.env.PORT || 3000);
+console.log("Listening to PORT "+process.env.PORT +"or "+ 3000);
