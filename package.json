@@ -4,13 +4,15 @@
   "main": "Server.js",
   "scripts": {
     "test": "mocha",
-     "start": "nodemon Server.js"
+    "start": "nodemon Server.js"
   },
-
   "homepage": "https://github.com/codeforgeek/Node-and-mongo-tutorial",
   "dependencies": {
     "body-parser": "^1.13.3",
     "express": "^4.13.3",
-    "mongoose": "^4.1.2"
+    "jsonwebtoken": "^5.4.1",
+    "mongoose": "^4.1.2",
+    "morgan": "^1.6.1",
+    "stripe": "^4.1.0"
   }
 }

@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Node Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="app" ng-controller="Main as main">
+
+<h1>Node Test</h1>
+
+<input type="text" ng-model="main.username" placeholder="username"><br>
+<input type="password" ng-model="main.password" placeholder="password"><br>
+<br>
+
+<button ng-click="main.register()">Register</button>
+<button ng-click="main.login()">Login</button>
+<button ng-click="main.logout()">Logout</button>
+
+<button ng-click="main.showUsers()">Show All Users</button>
+<button ng-click="main.showUser()">Get a User</button>
+<button ng-click="main.updateUser()">Update User</button>
+<button ng-click="main.deleteUser()">Delete User</button>
+<br><br>
+{{main.message}}
+
+<br><br>
+<div id="stripe-form" ng-controller="Form as form">
+    <form method="POST" id="payment-form" ng-submit="form.processForm()">
+        <div>
+            <div class="cc-text">Card Number</div>
+            <input type="text" size="30" autocomplete="off" class="card-number" ng-model="form.cardNumber"/>
+        </div>
+        <div>
+            <div class="cc-text">CVC</div>
+            <input type="text" size="4" ng-model="form.cvc"/>
+        </div>
+        <div>
+            <div class="cc-text">Expiration (MM/YYYY)</div>
+            <input type="text" size="2" ng-model="form.expiryMonth"/>
+            <span> / </span>
+            <input type="text" size="4" ng-model="form.expiryYear"/>
+        </div>
+        <span>Amount </span>
+        <br>
+        <input type="text" size="5" ng-model="form.amount"/>
+        <button type="submit">Submit Payment</button>
+    </form>
+</div>
+<br><br>
+</body>
+</html>
