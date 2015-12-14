@@ -200,7 +200,7 @@ Stripe.setPublishableKey(publicStripeApiKeyTesting);
         .service('user', userService)
         .service('auth', authService)
         .service('stripe', stripeService)
-        .constant('API', 'http://localhost:3000')
+        .constant('API', 'https://nameless-spire-5524.herokuapp.com')
         .config(function($httpProvider) {
             $httpProvider.interceptors.push('authInterceptor');
         })
